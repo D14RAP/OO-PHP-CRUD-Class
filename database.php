@@ -69,13 +69,11 @@
 
         public function result() {
             $value = $this->result;
-            $this->result = array();
             return $value;
         }
 
         public function count() {
             $value = $this->row_count;
-            $this->row_count = array();
             return $value;
         }
 
