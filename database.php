@@ -69,11 +69,13 @@
 
         public function result() {
             $value = $this->result;
+            $this->result = array();
             return $value;
         }
 
         public function count() {
             $value = $this->row_count;
+            $this->result = array();
             return $value;
         }
 
@@ -114,7 +116,7 @@
                     }
                     return true;
                 } else {
-                    array_push($this->result,$this->connect->error);
+                    array_push($this->result, $this->connect->error);
                     return false;
                 }
             } else {
